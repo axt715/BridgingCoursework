@@ -2,12 +2,15 @@
 <html>
     <head>
         <div class="page-header">
-            <h1><a href="/">My Blog</a></h1>
+            <header>
+                <h1><a href="{% url 'post_list' %}">My Blog</a></h1><h2><a href="{% url 'cv' %}">CV</a></h2>
+            </header>
         </div>
 
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" type="text/css">
         {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         {% endif %}
